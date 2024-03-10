@@ -33,7 +33,7 @@
   // 入口
   "include": [
     // 通配符用来匹配packages文件夹下任意文件夹的src
-    // 然后会在src文件夹中默认查找index.js文件
+    // 然后会在src文件夹中默认查找index.ts文件
     "packages/*/src"
   ]
 }
