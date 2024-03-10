@@ -6,11 +6,11 @@ import typescript from '@rollup/plugin-typescript'
 // 也就是说在这些对象中写配置信息
 export default[{
   // 入口文件
-  input: 'packages/vue/src/index.js',
+  input: './packages/vue/src/index.ts',
   // 打包出口
   output: [
-    // 导出life模式的包
-    // life模式, 一个自动执行的功能, 适合作为script标签
+    // 导出iife模式的包
+    // iife模式, 一个自动执行的功能, 适合作为script标签
     // 此模式详细查看上面的连接
     {
       // 开启sourceMap
@@ -18,7 +18,7 @@ export default[{
       // 导出地址
       file: './packages/vue/dist/vue.js',
       // 生成包的格式
-      format: 'life',
+      format: 'iife',
       // 变量名
       name: 'Vue'
     }], 
@@ -27,7 +27,7 @@ export default[{
     plugins: [
       // ts
       typescript({
-        sourcemap: true
+        sourceMap: true
       }),
       // 将模块导入的路径补全
       resolve(),
