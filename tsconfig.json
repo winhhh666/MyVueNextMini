@@ -28,12 +28,19 @@
     // 禁用sourceMap
     "sourceMap": false,
     // https://www.typescriptlang.org/tsconfig#lib
-    "lib":["esnext", "dom"]
+    "lib":["esnext", "dom"],
+    // 设置快捷导入
+    "baseUrl": ".",
+    "paths": {
+      "@vue/*": [
+        "packages/*/src"
+      ]
+    }
   },
   // 入口
   "include": [
     // 通配符用来匹配packages文件夹下任意文件夹的src
-    // 然后会在src文件夹中默认查找index.ts文件
+    // 然后会在src文件夹中默认查找index.s文件
     "packages/*/src"
   ]
 }
